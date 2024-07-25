@@ -29,3 +29,32 @@ cargo test
 ```bash
 stellar contract build
 ```
+
+## Deploy the contract hello-world to Testnet
+
+```bash
+stellar contract deploy \
+    --wasm target/wasm32-unknown-unknown/release/hello_world.wasm \
+    --source dev \
+    --network testnet
+```
+
+This returns the contract's id, starting with a `C`. In this example, we're going to use `CBT3DECFK3LIVI7L4RBYVTSVKTRMDJCZ25OXMA5NSOERO7SZY2JJ4Y3C`, so replace it with your actual contract id.
+
+## Interact with the deployed contract
+
+```bash
+stellar contract invoke \
+    --id CBT3DECFK3LIVI7L4RBYVTSVKTRMDJCZ25OXMA5NSOERO7SZY2JJ4Y3C \
+    --source dev \
+    --network testnet \
+    -- \
+    hello \
+    --to RPC
+```
+
+The following output should appear.
+
+```bash
+["Hello","RPC"]
+```
