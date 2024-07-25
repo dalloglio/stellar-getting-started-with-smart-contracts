@@ -1,0 +1,8 @@
+version: "3"
+services:
+  app:
+    image: dalloglio/rust-with-stellar-cli
+    tty: true
+    working_dir: /home/dev/app/soroban
+    volumes:
+      - .:/home/dev/app
