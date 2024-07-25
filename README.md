@@ -58,3 +58,21 @@ The following output should appear.
 ```bash
 ["Hello","RPC"]
 ```
+
+## Add the increment contract
+
+```bash
+stellar contract init ./ --with-example increment
+```
+
+## Run the tests again
+
+```bash
+cargo test
+```
+
+## Build the contracts
+
+```bash
+stellar contract build
+```
