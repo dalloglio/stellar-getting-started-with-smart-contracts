@@ -7,7 +7,7 @@ services:
       - .:/home/bob/app
   
   stellar:
-    image: stellar/quickstart:testing
+    image: stellar/quickstart
     container_name: stellar
     ports:
       - "8000:8000"
